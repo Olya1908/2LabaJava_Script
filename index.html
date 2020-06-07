@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href=style.css>
+    <script defer type="text/javascript" src="Table.js"></script>
+    <title>Супер таблица</title>
+  </head>
+
+  <body>
+  	<h1>Соревнования по стрельбе</h1>
+    <form action="" id="formAddNewData" method="post" onsubmit="addRow();return false;">
+      <fieldset>
+      <legend>Добавление участника соревнований</legend>
+          <ul>
+              <li>
+                  <label for="surnameРarticipant">Фамилия участника:</label>
+                  <input type="text" name="surnameРarticipant" id="surnameРarticipant" value="" size="20" tabindex="1"/>
+              </li>
+              <li>
+                  <label for="pointsFirstRound">Баллы за 1 тур:</label> 
+                  <input type="text" name="pointsFirstRound" id="pointsFirstRound" value="" size="20" tabindex="2"/>
+              </li>
+              <li>
+                  <label for="pointsSecondRound">Баллы за 2 тур:</label>
+                  <input type="text" name="pointsSecondRound" id="pointsSecondRound" value="" size="20" tabindex="3"/>
+              </li>
+                <input type="submit" name="btnAdd" value="Добавить" />
+        </ul>
+      </fieldset>
+      </form>
+
+      <table id="resultTable">
+        <thead>
+          <tr>
+            <th dataType = "text">Участник</th>
+            <th dataType = "integer">Баллы за 1 тур</th>
+            <th dataType = "integer">Баллы за 2 тур</th>
+            <th dataType = "integer">Сумма</th>
+            <th>Удалить</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Иванов</td>
+            <td>4</td>
+            <td>3</td>
+            <td>7</td>
+            <td>
+              <input type="button" name="btnDel" value="Удалить" onclick= "delRow(this)">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+  </body>
+</html>
