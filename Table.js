@@ -21,6 +21,11 @@ function addRow(){
     alert('Ошибка! Неккоректные данные!');
 }
 
+function delRow(btn) {
+  let row = btn.parentNode.parentNode.rowIndex;
+  table.deleteRow(row);
+}
+
 function compareElem(rowA,rowB){
   if (rowA < rowB) 
     return -1;
