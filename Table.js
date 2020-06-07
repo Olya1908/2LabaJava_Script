@@ -1,10 +1,5 @@
 let table = document.getElementById('resultTable');
 
-function delRow(btn) {
-  let row = btn.parentNode.parentNode.rowIndex;
-  table.deleteRow(row);
-}
-
 function addRow(){
   const surnameРarticipant = document.getElementById('surnameРarticipant'),
         pointsFirstRound = document.getElementById('pointsFirstRound'),
